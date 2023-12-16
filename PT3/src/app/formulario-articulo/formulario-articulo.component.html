@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+    <h2>Articulos:</h2>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="codigo">Código</label>
+        <input type="text" class="form-control col-sm-2" id="codigo" formControlName="codigo">
+        <small id="codigoHelp" class="form-text text-danger text-danger col-sm-2">{{validation_codigo}}</small>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="descripcion">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" formControlName="descripcion">
+        <small id="descripcionHelp" class="form-text text-danger text-danger">{{validation_descripcion}}</small>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="precio">Precio</label>
+        <input type="text" class="form-control" id="precio" formControlName="precio">
+        <small id="precioHelp" class="form-text text-danger">{{validation_precio}}</small>
+    </div>
+    <div class="form-group row mt-2">
+        <button type="button" class="col-sm-1 btn btn-sm btn-primary mx-1" (click)="send_data()">Guardar nuevo </button>
+        <button type="button" class="col-sm-1 btn btn-sm btn-warning" (click)="update_data()">Modificar</button>
+    </div>
+</form>

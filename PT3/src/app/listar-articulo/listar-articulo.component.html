@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Seleccionar</th>
+            <th scope="col">Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for ( articulo of array_registros; track $index) {
+        <tr>
+            <th scope="row">{{articulo.codigo}}</th>
+            <td>{{articulo.descripcion}}</td>
+            <td>{{articulo.precio}}</td>
+            <td>
+                <button type="button" class="col-sm-6 btn btn-primary" (click)="edit(articulo.codigo)">Editar</button>
+            </td>
+            <td>
+                <button type="button" class="col-sm-6 btn btn-danger"
+                    (click)="delete_data(articulo.codigo)">Borrar</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
